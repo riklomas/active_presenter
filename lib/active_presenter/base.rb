@@ -5,8 +5,8 @@ module ActivePresenter
     include ActiveSupport::Callbacks
     define_callbacks :before_validation, :before_save, :after_save
     
-    class_inheritable_accessor :presented
-    class_inheritable_accessor :attr_protected, :attr_accessible
+    class_attribute :presented
+    class_attribute :attr_protected, :attr_accessible
     self.presented = {}
     
     # Indicates which models are to be presented by this presenter.
